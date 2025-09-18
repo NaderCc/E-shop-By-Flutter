@@ -33,6 +33,7 @@ class _MyAppState extends State<MyApp>
   String? loginName;
   String? loginPassword;
   User userTem = new User("","","","", "");
+  var reg_user=new User("","","","", "");
   bool show = false;
   GlobalKey<FormState> formstate = GlobalKey();
   GlobalKey<FormState> formstate2 = GlobalKey();
@@ -187,6 +188,7 @@ class _MyAppState extends State<MyApp>
                     setState(() {
                       isNew = val;
                       isRegest=!val;
+
                     });
                   },
                   title: Text("To Sign Up Press On"),
@@ -211,7 +213,7 @@ class _MyAppState extends State<MyApp>
                           onSaved:(val)
                           {
 
-                            userTem.user_name=val!;
+                            reg_user.user_name=val!;
 
                           },
                           decoration: InputDecoration(
@@ -231,7 +233,7 @@ class _MyAppState extends State<MyApp>
                           },
                           onSaved:(val)
                           {
-                            userTem.password=val!;
+                            reg_user.password=val!;
                           },
                           decoration: InputDecoration(
                             prefix: Icon(Icons.lock),
@@ -247,7 +249,7 @@ class _MyAppState extends State<MyApp>
                           },
                           onSaved:(val)
                           {
-                            userTem.number=val;
+                            reg_user.number=val;
                           },
                           decoration: InputDecoration(
                             prefix: Icon(Icons.lock),
@@ -263,7 +265,7 @@ class _MyAppState extends State<MyApp>
                           },
                           onSaved:(val)
                           {
-                            userTem.name=val;
+                            reg_user.name=val;
                           },
                           decoration: InputDecoration(
                             prefix: Icon(Icons.lock),
@@ -279,7 +281,7 @@ class _MyAppState extends State<MyApp>
                           },
                           onSaved:(val)
                           {
-                            userTem.img=val;
+                            reg_user.img=val;
                           },
                           decoration: InputDecoration(
                             prefix: Icon(Icons.lock),
@@ -300,7 +302,7 @@ class _MyAppState extends State<MyApp>
                                 }
                                 else
                                 {
-                                  Users.add(userTem);
+                                  Users.add(reg_user);
                                   print("sss");
                                   isRegest=true;
                                 }
