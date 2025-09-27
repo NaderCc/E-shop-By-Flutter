@@ -21,6 +21,7 @@ class _HomePage extends State<HomePage>
           body: ListView(
 
             children: [
+
                   Container(
                     padding: EdgeInsets.all(10),
                     margin: EdgeInsets.all(10),
@@ -54,7 +55,13 @@ class _HomePage extends State<HomePage>
 
               ],
                   )
+              ),
+              Container(
+
+                margin: EdgeInsets.only(left: 30,top: 20),
+                child: Text("Catagories",textAlign: TextAlign.left,style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,),),
               )
+
             ],
           )
           );
