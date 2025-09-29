@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+
+
 class HomePage extends StatefulWidget {
   HomePage({super.key});
 
@@ -185,12 +187,130 @@ class _HomePage extends State<HomePage>
               ),
 
               GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-
+              physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               children: [
                 Card(
 
-                )
+                  child: Column(
+                    children: [
+                      Expanded(
+                        flex: 4,
+                        child: Container(
+                          color: Colors.grey.shade300,
+                          width: 300,
+                          child:Image.asset("image/ear.png",height: 130,fit: BoxFit.fill,),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+
+                        child: ListTile(
+
+                            trailing: Text("999\$" ,textDirection: TextDirection.ltr,
+                                style: TextStyle(fontSize: 20,color: Colors.deepOrangeAccent,fontWeight: FontWeight.bold)),
+                            title: Text("Samsung",
+                                style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.black)),
+                            subtitle:Text("noise Block" ,textDirection: TextDirection.ltr,
+                              style: TextStyle(fontSize: 14,color: Colors.blueGrey,fontWeight: FontWeight.w400),
+
+                            )
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Card(
+
+                  child: Column(
+                    children: [
+                      Expanded(
+                        flex: 4,
+                        child: Container(
+                          color: Colors.grey.shade300,
+                          width: 300,
+                          child:Image.asset("image/w2.png",height: 130,fit: BoxFit.fill,),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+
+                        child: ListTile(
+
+                            trailing: Text("859\$" ,textDirection: TextDirection.ltr,
+                                style: TextStyle(fontSize: 20,color: Colors.deepOrangeAccent,fontWeight: FontWeight.bold)),
+                            title: Text("Apple",
+                                style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.black)),
+                            subtitle:Text("water proov" ,textDirection: TextDirection.ltr,
+                              style: TextStyle(fontSize: 14,color: Colors.blueGrey,fontWeight: FontWeight.w400),
+
+                            )
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Card(
+
+                  child: Column(
+                    children: [
+                       Expanded(
+                         flex: 4,
+                         child: Container(
+                         color: Colors.grey.shade300,
+                            width: 300,
+                            child:Image.asset("image/head.png",height: 130,fit: BoxFit.fill,),
+                          ),
+                       ),
+
+                       Expanded(
+                         flex: 2,
+
+                         child: ListTile(
+
+                           trailing: Text("399\$" ,textDirection: TextDirection.ltr,
+                            style: TextStyle(fontSize: 20,color: Colors.deepOrangeAccent,fontWeight: FontWeight.bold)),
+                           title: Text("Logtic",
+                               style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.black)),
+                           subtitle:Text("Suitable for CS" ,textDirection: TextDirection.ltr,
+                               style: TextStyle(fontSize: 14,color: Colors.blueGrey,fontWeight: FontWeight.w400),
+
+                         )
+                         ),
+                       ),
+                    ],
+                  ),
+                ),
+                Card(
+
+                  child: Column(
+                    children: [
+                      Expanded(
+                        flex: 4,
+                        child: Container(
+                          color: Colors.grey.shade300,
+                          width: 300,
+                          child:Image.asset("image/watch.png",height: 130,fit: BoxFit.fill,),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+
+                        child: ListTile(
+
+                            trailing: Text("299\$" ,textDirection: TextDirection.ltr,
+                                style: TextStyle(fontSize: 20,color: Colors.deepOrangeAccent,fontWeight: FontWeight.bold)),
+                            title: Text("Hauwai",
+                                style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.black)),
+                            subtitle:Text("HeartBeat" ,textDirection: TextDirection.ltr,
+                              style: TextStyle(fontSize: 14,color: Colors.blueGrey,fontWeight: FontWeight.w400),
+
+                            )
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],)
             ],
           )
