@@ -1,24 +1,27 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:untitled12/iconcatagories.dart';
+import 'package:untitled12/productcard.dart';
 
 
-
+// starting stateful class
 class HomePage extends StatefulWidget {
   HomePage({super.key});
-
   @override
   State<HomePage> createState() => _HomePage();
 }
+//End of the class
 
-
+//Homepage class
 class _HomePage extends State<HomePage>
 {
   GlobalKey<ScaffoldState> scaff = GlobalKey();
   @override
   Widget build(BuildContext context) {
+    //Start Scaffold to Organize The body of the app
     return  Scaffold(
-      key: scaff,
+      key: scaff, //
           drawer: Drawer(
             child: ListView(
               children: [
@@ -97,86 +100,10 @@ class _HomePage extends State<HomePage>
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    Column(
-                      children: [
-                        Container(
-
-                          height: 100,
-                          width: 100,
-
-                          child:MaterialButton(onPressed: (){},
-                            child:ClipRRect(
-                              borderRadius: BorderRadius.circular(150),
-
-                              child: Image.asset("image/men.jpg"
-                                ,fit: BoxFit.fill,),
-
-                            ) ,
-                          ),
-                    ),
-                        Text("Men",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.blueGrey)),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-
-                          height: 100,
-                          width: 100,
-
-                          child:MaterialButton(onPressed: (){},
-                            child:ClipRRect(
-                              borderRadius: BorderRadius.circular(150),
-
-                              child: Image.asset("image/women.jpg"
-                                ,fit: BoxFit.fill,),
-
-                            ) ,
-                          ),
-                        ),
-                        Text("Women",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.blueGrey)),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height: 100,
-                          width: 100,
-
-                          child:MaterialButton(onPressed: (){},
-                            child:ClipRRect(
-                              borderRadius: BorderRadius.circular(150),
-
-                              child: Image.asset("image/ele.jpg"
-                                ,fit: BoxFit.fill,),
-
-                            ) ,
-                          ),
-                        ),
-                        Text("Electrical",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.blueGrey)),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-
-                          height: 100,
-                          width: 100,
-
-                          child:MaterialButton(onPressed: (){},
-                            child:ClipRRect(
-                              borderRadius: BorderRadius.circular(150),
-
-                              child: Image.asset("image/hop.png"
-                                ,fit: BoxFit.fill,),
-
-                            ) ,
-                          ),
-                        ),
-                        Text("Hobbies",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.blueGrey)),
-                      ],
-                    ),
-
+                    IconCatagories(imagePath: "image/men.jpg", iconName: "Men"),
+                    IconCatagories(imagePath: "image/women.jpg", iconName: "Women"),
+                    IconCatagories(imagePath: "image/ele.jpg", iconName: "Electrical"),
+                    IconCatagories(imagePath: "image/hop.png", iconName: "Hobbies"),
                   ],
                 ),
               ),
@@ -190,127 +117,10 @@ class _HomePage extends State<HomePage>
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               children: [
-                Card(
-
-                  child: Column(
-                    children: [
-                      Expanded(
-                        flex: 4,
-                        child: Container(
-                          color: Colors.grey.shade300,
-                          width: 300,
-                          child:Image.asset("image/ear.png",height: 130,fit: BoxFit.fill,),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 2,
-
-                        child: ListTile(
-
-                            trailing: Text("999\$" ,textDirection: TextDirection.ltr,
-                                style: TextStyle(fontSize: 20,color: Colors.deepOrangeAccent,fontWeight: FontWeight.bold)),
-                            title: Text("Samsung",
-                                style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.black)),
-                            subtitle:Text("noise Block" ,textDirection: TextDirection.ltr,
-                              style: TextStyle(fontSize: 14,color: Colors.blueGrey,fontWeight: FontWeight.w400),
-
-                            )
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Card(
-
-                  child: Column(
-                    children: [
-                      Expanded(
-                        flex: 4,
-                        child: Container(
-                          color: Colors.grey.shade300,
-                          width: 300,
-                          child:Image.asset("image/w2.png",height: 130,fit: BoxFit.fill,),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 2,
-
-                        child: ListTile(
-
-                            trailing: Text("859\$" ,textDirection: TextDirection.ltr,
-                                style: TextStyle(fontSize: 20,color: Colors.deepOrangeAccent,fontWeight: FontWeight.bold)),
-                            title: Text("Apple",
-                                style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.black)),
-                            subtitle:Text("water proov" ,textDirection: TextDirection.ltr,
-                              style: TextStyle(fontSize: 14,color: Colors.blueGrey,fontWeight: FontWeight.w400),
-
-                            )
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Card(
-
-                  child: Column(
-                    children: [
-                       Expanded(
-                         flex: 4,
-                         child: Container(
-                         color: Colors.grey.shade300,
-                            width: 300,
-                            child:Image.asset("image/head.png",height: 130,fit: BoxFit.fill,),
-                          ),
-                       ),
-
-                       Expanded(
-                         flex: 2,
-
-                         child: ListTile(
-
-                           trailing: Text("399\$" ,textDirection: TextDirection.ltr,
-                            style: TextStyle(fontSize: 20,color: Colors.deepOrangeAccent,fontWeight: FontWeight.bold)),
-                           title: Text("Logtic",
-                               style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.black)),
-                           subtitle:Text("Suitable for CS" ,textDirection: TextDirection.ltr,
-                               style: TextStyle(fontSize: 14,color: Colors.blueGrey,fontWeight: FontWeight.w400),
-
-                         )
-                         ),
-                       ),
-                    ],
-                  ),
-                ),
-                Card(
-
-                  child: Column(
-                    children: [
-                      Expanded(
-                        flex: 4,
-                        child: Container(
-                          color: Colors.grey.shade300,
-                          width: 300,
-                          child:Image.asset("image/watch.png",height: 130,fit: BoxFit.fill,),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 2,
-
-                        child: ListTile(
-
-                            trailing: Text("299\$" ,textDirection: TextDirection.ltr,
-                                style: TextStyle(fontSize: 20,color: Colors.deepOrangeAccent,fontWeight: FontWeight.bold)),
-                            title: Text("Hauwai",
-                                style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.black)),
-                            subtitle:Text("HeartBeat" ,textDirection: TextDirection.ltr,
-                              style: TextStyle(fontSize: 14,color: Colors.blueGrey,fontWeight: FontWeight.w400),
-
-                            )
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                ProductCard(imagePath: "image/watch.png",brand: "Hawai",details: "water proov",price: "299",),
+                ProductCard(brand: "Samsung", details: "noiseBlock", imagePath: "image/ear.png", price: "999"),
+                ProductCard(brand: "Apple", details: "water proov", imagePath: "image/w2.png", price: "859"),
+                ProductCard(brand: "Logtic", details: "Suitable Cs", imagePath: "image/head.png", price: "399")
               ],)
             ],
           )
