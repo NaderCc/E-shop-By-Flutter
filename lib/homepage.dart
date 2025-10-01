@@ -22,6 +22,16 @@ class _HomePage extends State<HomePage>
     //Start Scaffold to Organize The body of the app
     return  Scaffold(
       key: scaff, //
+        bottomNavigationBar: BottomNavigationBar(
+            iconSize: 30,
+            //selectedLabelStyle:TextStyle( color:Colors.deepOrangeAccent),
+            selectedItemColor: Colors.deepOrange,
+            items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home),label: "*"),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_bag),label: "*"),
+          BottomNavigationBarItem(icon: Icon(Icons.person),label: "*"),
+
+        ]),
           drawer: Drawer(
             child: ListView(
               children: [
@@ -113,14 +123,33 @@ class _HomePage extends State<HomePage>
                 child: Text("!! Best Selling !!",textAlign: TextAlign.left,style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.red.shade200),),
               ),
 
-              GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisExtent: 230),
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               children: [
-                ProductCard(imagePath: "image/watch.png",brand: "Hawai",details: "water proov",price: "299",),
-                ProductCard(brand: "Samsung", details: "noiseBlock", imagePath: "image/ear.png", price: "999"),
-                ProductCard(brand: "Apple", details: "water proov", imagePath: "image/w2.png", price: "859"),
-                ProductCard(brand: "Logtic", details: "Suitable Cs", imagePath: "image/head.png", price: "399")
+
+                ProductCard(imagePath: {
+                  0:"image/shoeG.png",
+                  1:"image/shoeB.png",
+                  2:"image/shoeW.png"
+                },brand: "Hawai",details: "water proov",price: "299",),
+                ProductCard(brand: "Samsung", details: "noiseBlock", imagePath: {
+
+                  0:"image/w2.png",
+                  1:"image/ear.png",
+                  2:"image/watch.png"
+                }, price: "999"),
+                ProductCard(brand: "Apple", details: "water proov", imagePath: {
+                  0:"image/ear.png",
+                  1:"image/w2.png",
+                  2:"image/watch.png"
+                }, price: "859"),
+                ProductCard(brand: "Logtic", details: "Suitable Cs",imagePath: {
+                  0:"image/watch.png",
+                  1:"image/ear.png",
+                  2:"image/w2.png",
+
+                }, price: "399",)
               ],)
             ],
           )

@@ -50,4 +50,21 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
-flutter: { uses-material-design: true, assets: [ image/women.jpg, image/men.jpg, image/hop.png, image/ele.jpg, image/head.png , image/watch.png, image/w2.png,image/ear.png] }
+flutter:
+  uses-material-design: true
+
+  assets:
+    - image/women.jpg
+    - image/men.jpg
+    - image/hop.png
+    - image/ele.jpg
+    - image/head.png
+    - image/watch.png
+    - image/w2.png
+    - image/ear.png
+    - image/shoeB.png
+    - image/shoeG.png
+    - image/shoeW.png
+
+
+
