@@ -110,10 +110,80 @@ class _HomePage extends State<HomePage>
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    IconCatagories(imagePath: "image/men.jpg", iconName: "Men"),
-                    IconCatagories(imagePath: "image/women.jpg", iconName: "Women"),
-                    IconCatagories(imagePath: "image/ele.jpg", iconName: "Electrical"),
-                    IconCatagories(imagePath: "image/hop.png", iconName: "Hobbies"),
+                    IconCatagories(imagePath: "image/men.jpg", iconName: "Men",
+                    products: [
+                      ProductCard(imagePath: {
+                        0:"image/shoeG.png",
+                        1:"image/shoeB.png",
+                        2:"image/shoeW.png"
+                      },brand: "MenShoe",details: "lizard skin",price: "299",),
+                      ProductCard(brand: "Nike", details: "sport shoes", imagePath: {
+
+                        0:"image/kutchG.png",
+                        1:"image/kutchB.png",
+                        2:"image/kutchW.png"
+                      }, price: "999"),
+                      ProductCard(brand: "Zara", details: "soft T-shirt", imagePath: {
+                        0:"image/TG.png",
+                        1:"image/TB.png",
+                        2:"image/TW.png"
+                      }, price: "859"),
+                    ],),
+                    IconCatagories(imagePath: "image/women.jpg", iconName: "Women",
+                    products: [
+                      ProductCard(imagePath: {
+                        0:"image/shoeG.png",
+                        1:"image/shoeB.png",
+                        2:"image/shoeW.png"
+                      },brand: "MenShoe",details: "lizard skin",price: "299",),
+                      ProductCard(brand: "Nike", details: "sport shoes", imagePath: {
+
+                        0:"image/kutchG.png",
+                        1:"image/kutchB.png",
+                        2:"image/kutchW.png"
+                      }, price: "999"),
+                      ProductCard(brand: "Zara", details: "soft T-shirt", imagePath: {
+                        0:"image/TG.png",
+                        1:"image/TB.png",
+                        2:"image/TW.png"
+                      }, price: "859"),
+                    ],),
+                    IconCatagories(imagePath: "image/ele.jpg", iconName: "Electrical",
+                    products: [ProductCard(imagePath: {
+                      0:"image/shoeG.png",
+                      1:"image/shoeB.png",
+                      2:"image/shoeW.png"
+                    },brand: "MenShoe",details: "lizard skin",price: "299",),
+                      ProductCard(brand: "Nike", details: "sport shoes", imagePath: {
+
+                        0:"image/kutchG.png",
+                        1:"image/kutchB.png",
+                        2:"image/kutchW.png"
+                      }, price: "999"),
+                      ProductCard(brand: "Zara", details: "soft T-shirt", imagePath: {
+                        0:"image/TG.png",
+                        1:"image/TB.png",
+                        2:"image/TW.png"
+                      }, price: "859"),],),
+                    IconCatagories(imagePath: "image/hop.png", iconName: "Hobbies",
+                    products: [
+                      ProductCard(imagePath: {
+                        0:"image/shoeG.png",
+                        1:"image/shoeB.png",
+                        2:"image/shoeW.png"
+                      },brand: "MenShoe",details: "lizard skin",price: "299",),
+                      ProductCard(brand: "Nike", details: "sport shoes", imagePath: {
+
+                        0:"image/kutchG.png",
+                        1:"image/kutchB.png",
+                        2:"image/kutchW.png"
+                      }, price: "999"),
+                      ProductCard(brand: "Zara", details: "soft T-shirt", imagePath: {
+                        0:"image/TG.png",
+                        1:"image/TB.png",
+                        2:"image/TW.png"
+                      }, price: "859"),
+                    ],),
                   ],
                 ),
               ),
@@ -132,12 +202,12 @@ class _HomePage extends State<HomePage>
                   0:"image/shoeG.png",
                   1:"image/shoeB.png",
                   2:"image/shoeW.png"
-                },brand: "Hawai",details: "water proov",price: "299",),
-                ProductCard(brand: "Samsung", details: "noiseBlock", imagePath: {
+                },brand: "MenShoe",details: "lizard skin",price: "299",),
+                ProductCard(brand: "Hails", details: "Natural Skin", imagePath: {
 
-                  0:"image/w2.png",
-                  1:"image/ear.png",
-                  2:"image/watch.png"
+                  0:"image/Hg.png",
+                  1:"image/Hb.png",
+                  2:"image/Hw.png"
                 }, price: "999"),
                 ProductCard(brand: "Apple", details: "water proov", imagePath: {
                   0:"image/ear.png",
