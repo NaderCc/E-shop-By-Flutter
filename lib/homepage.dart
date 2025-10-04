@@ -131,40 +131,27 @@ class _HomePage extends State<HomePage>
                     ],),
                     IconCatagories(imagePath: "image/women.jpg", iconName: "Women",
                     products: [
-                      ProductCard(imagePath: {
-                        0:"image/shoeG.png",
-                        1:"image/shoeB.png",
-                        2:"image/shoeW.png"
-                      },brand: "MenShoe",details: "lizard skin",price: "299",),
-                      ProductCard(brand: "Nike", details: "sport shoes", imagePath: {
+                      ProductCard(brand: "Hails", details: "Natural Skin", imagePath: {
 
-                        0:"image/kutchG.png",
-                        1:"image/kutchB.png",
-                        2:"image/kutchW.png"
+                        0:"image/Hg.png",
+                        1:"image/Hb.png",
+                        2:"image/Hw.png"
                       }, price: "999"),
-                      ProductCard(brand: "Zara", details: "soft T-shirt", imagePath: {
-                        0:"image/TG.png",
-                        1:"image/TB.png",
-                        2:"image/TW.png"
-                      }, price: "859"),
+
                     ],),
                     IconCatagories(imagePath: "image/ele.jpg", iconName: "Electrical",
                     products: [ProductCard(imagePath: {
-                      0:"image/shoeG.png",
-                      1:"image/shoeB.png",
-                      2:"image/shoeW.png"
-                    },brand: "MenShoe",details: "lizard skin",price: "299",),
-                      ProductCard(brand: "Nike", details: "sport shoes", imagePath: {
+                      0:"image/AG.png",
+                      1:"image/AB.png",
+                      2:"image/AW.png"
+                    },brand: "Sharp",details: "TurboCold",price: "480",),
+                      ProductCard(brand: "Sharp", details: "No-Frost", imagePath: {
 
-                        0:"image/kutchG.png",
-                        1:"image/kutchB.png",
-                        2:"image/kutchW.png"
-                      }, price: "999"),
-                      ProductCard(brand: "Zara", details: "soft T-shirt", imagePath: {
-                        0:"image/TG.png",
-                        1:"image/TB.png",
-                        2:"image/TW.png"
-                      }, price: "859"),],),
+                        0:"image/FG.png",
+                        1:"image/FB.png",
+                        2:"image/FW.png"
+                      }, price: "820"),]
+                      ),
                     IconCatagories(imagePath: "image/hop.png", iconName: "Hobbies",
                     products: [
                       ProductCard(imagePath: {

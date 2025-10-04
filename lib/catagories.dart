@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:untitled12/productcard.dart';
 
+import 'CustomSearch.dart';
+
 class Categories extends StatefulWidget {
   final String nameCat ;
   final List<ProductCard> products;
@@ -29,17 +31,16 @@ class _CategoriesState extends State<Categories> {
         centerTitle: true,
         title: Text("${widget.nameCat} Categories"),
         actions: [
-          PopupMenuButton<String>(
-            onSelected: (val) {
-              setState(() {
-                selectedValue = val; // ✅ هنا بتخزن القيمة المختارة
-              });
-            },
-            itemBuilder: (context) => [
-              PopupMenuItem(child: Text("Adult"), value: "adult"),
-              PopupMenuItem(child: Text("Child"), value: "child"),
-            ],
-          ),
+          IconButton(onPressed: (){
+            showSearch(context: (context), delegate: CustomSearch(searchWords:
+              [
+                "Zara",
+                "Guchi",
+                "MenShoe",
+                "Nike"
+              ]
+            ),);
+    },icon:Icon(Icons.search)),
         ],
 
       ),
