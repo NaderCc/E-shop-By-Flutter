@@ -2,6 +2,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled12/main.dart';
+import 'package:flutter_card_swiper/flutter_card_swiper.dart';
+
+import 'cartbutton.dart';
+
 
 class Details extends StatefulWidget
 {
@@ -17,6 +21,23 @@ class Details extends StatefulWidget
 }
 class MyApp extends State<Details>
 {
+  List<Container> cards = [
+    Container(
+      alignment: Alignment.center,
+      child: const Text('1'),
+      color: Colors.blue,
+    ),
+    Container(
+      alignment: Alignment.center,
+      child: const Text('2'),
+      color: Colors.red,
+    ),
+    Container(
+      alignment: Alignment.center,
+      child: const Text('3'),
+      color: Colors.purple,
+    )
+  ];
   int count = 0 ;
   String selectedColor ="grey";
   final Map<int,String> colorCh=
@@ -117,6 +138,10 @@ class MyApp extends State<Details>
 
               ],
             ),
+          ),
+          Container(
+            height: 100,
+            child: CartButton(),
           )
         ],
       )

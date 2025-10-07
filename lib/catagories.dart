@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:untitled12/productcard.dart';
 
 import 'CustomSearch.dart';
@@ -53,18 +54,14 @@ class _CategoriesState extends State<Categories> {
               margin: EdgeInsets.only(left: 30,top: 20),
               child: Text("!! Best Selling !!",textAlign: TextAlign.left,style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.red.shade200),),
             ),
-            GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisExtent: 230),
-              physics: NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              children: [
-                ...List.generate( widget.products.length
-                , (index)
-                {
-                  return widget.products[index];
-                }),
 
-
-              ],),
+              Container(
+                height: 400,
+              child: CardSwiper(
+              cardsCount: widget.products.length,
+              cardBuilder: (context, index, percentThresholdX, percentThresholdY) => widget.products[index],
+            ),
+        ),
           ],
         ),
       ),
