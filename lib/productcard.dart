@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' show MaterialPageRoute, Colors, MaterialButton, ListTile, Card;
-import 'package:untitled12/details.dart';
+import 'package:e_shop/details.dart';
 
 
 class ProductCard extends StatelessWidget {

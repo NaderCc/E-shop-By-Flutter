@@ -1,7 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled12/main.dart';
+import 'package:e_shop/main.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 
 import 'cartbutton.dart';

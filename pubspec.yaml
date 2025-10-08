@@ -1,4 +1,4 @@
-name: untitled12
+name: e_shop
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+
   flutter:
     sdk: flutter
 
@@ -37,11 +38,16 @@ dependencies:
   http: ^1.5.0
   flutter_card_swiper: ^7.0.2
   flutter_add_to_cart_button: ^1.2.0
+  flutter_launcher_icons: ^0.14.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "image/store.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -84,6 +90,7 @@ flutter:
     - image/FW.png
     - image/FG.png
     - image/ic_cart.png
+    - image/store.png
 
 
 

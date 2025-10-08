@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:untitled12/iconcatagories.dart';
-import 'package:untitled12/productcard.dart';
+import 'package:e_shop/iconcatagories.dart';
+import 'package:e_shop/productcard.dart';
 
 
 // starting stateful class
