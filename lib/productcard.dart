@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' show MaterialPageRoute, Colors, MaterialButton, ListTile, Card;
 import 'package:e_shop/details.dart';
+import 'package:get/get.dart';
 
 
 class ProductCard extends StatelessWidget {
@@ -64,7 +65,8 @@ class ProductCard extends StatelessWidget {
             child:  MaterialButton(
 
             onPressed: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Details(imagePath: imagePath,)));
+              Get.to(Details(imagePath: imagePath,));
+             // Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Details(imagePath: imagePath,)));
             },
             color: Colors.white54,
             child: Text("Buy!",textAlign: TextAlign.center,

@@ -39,6 +39,7 @@ dependencies:
   flutter_card_swiper: ^7.0.2
   flutter_add_to_cart_button: ^1.2.0
   flutter_launcher_icons: ^0.14.4
+  get: ^4.7.2
 
 dev_dependencies:
   flutter_test:

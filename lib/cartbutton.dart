@@ -16,12 +16,13 @@ class _MyAppState extends State<CartButton> {
             child: Padding(
               padding: const EdgeInsets.all(24),
               child: AddToCartButton(
-                trolley: Image.asset(
+                trolley: Icon(Icons.shopping_cart_outlined,size: 24,color: Colors.white,),
+                /*Image.asset(
                   'image/ic_cart.png',
                   width: 24,
                   height: 24,
 
-                ),
+                ),*/
                 text: Text(
                   'Add to cart',
                   textAlign: TextAlign.center,

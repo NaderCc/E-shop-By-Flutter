@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:e_shop/productcard.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import 'catagories.dart';
 
@@ -31,7 +33,8 @@ class IconCatagories extends StatelessWidget
           width: 100,
 
           child:MaterialButton(onPressed: (){
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Categories(nameCat: iconName,products: products,)));
+            //Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Categories(nameCat: iconName,products: products,)));
+            Get.to(Categories(nameCat: iconName,products: products,));
           },
             child:ClipRRect(
               borderRadius: BorderRadius.circular(150),
