@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:e_shop/homepage.dart';
+import 'package:get/get.dart';
 
 import 'model/Contact.dart';
 void main() {
@@ -16,7 +17,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin
   GlobalKey<ScaffoldState> scaff = GlobalKey();
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
         home:  HomePage(),);
 
   }

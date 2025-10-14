@@ -1,8 +1,11 @@
 
+import 'package:e_shop/contoller/detailscontroller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:e_shop/main.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
+import 'package:get/get.dart';
+
 
 import 'cartbutton.dart';
 
@@ -38,12 +41,6 @@ class MyApp extends State<Details>
       color: Colors.purple,
     )
   ];
-  int count = 0 ;
-  String selectedColor ="grey";
-  final Map<int,String> colorCh=
-    {0 : "grey",
-    1 : "black",
-    2 : "white"};
 
 
   @override
@@ -71,20 +68,21 @@ class MyApp extends State<Details>
       body: ListView(
         children: [
           Container(
-            child: Row(
+            child:GetBuilder<DetailsController>(
+            init: DetailsController(),
+            builder:(controller)=> Row(
+
               children: [
                 Expanded(
                   child: Container(
-
                     padding: EdgeInsets.all(30),
-
                     height: 400,
                     color: Colors.grey.shade300,
                     child:Column(
                       children: [
                         Expanded(
                           child: Image.asset(
-                              "${widget.imagePath![count]}"
+                              "${widget.imagePath![controller.count]}"
                           ),
                         ),
                         Expanded(
@@ -92,39 +90,24 @@ class MyApp extends State<Details>
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Icon(Icons.circle,color: Colors.grey,),
-                              Radio(value: "grey", groupValue:colorCh ,fillColor: MaterialStateProperty.all(Colors.grey),
+                              Radio(value: "grey", groupValue:controller.colorCh ,fillColor: MaterialStateProperty.all(Colors.grey),
                                 onChanged: (val)
                                 {
-                                  setState(() {
-                                    selectedColor ="grey";
-                                    count = colorCh.keys.firstWhere(
-                                          (k) => colorCh[k] == selectedColor,
-                                    );
-                                  });
+                                    controller.greyColor(val);
                                 },
                               ),
                               Icon(Icons.circle,color: Colors.black,),
-                              Radio(value: "black", groupValue:colorCh ,fillColor: MaterialStateProperty.all(Colors.black),
+                              Radio(value: "black", groupValue:controller.colorCh ,fillColor: MaterialStateProperty.all(Colors.black),
                                 onChanged: (val)
                                 {
-                                  setState(() {
-                                    selectedColor ="black";
-                                    count = colorCh.keys.firstWhere(
-                                          (k) => colorCh[k] == selectedColor,
-                                    );
-                                  });
+                                    controller.blackColor(val);
                                 },
                               ),
                               Icon(Icons.circle,color: Colors.white,),
-                              Radio(value: "white", groupValue:colorCh ,fillColor: MaterialStateProperty.all(Colors.white),
+                              Radio(value: "white", groupValue:controller.colorCh ,fillColor: MaterialStateProperty.all(Colors.white),
                                 onChanged: (val)
                                 {
-                                  setState(() {
-                                    selectedColor ="white";
-                                    count = colorCh.keys.firstWhere(
-                                          (k) => colorCh[k] == selectedColor,
-                                    );
-                                  });
+                                 controller.whiteColor(val);
                                 },
                               )
                             ],
@@ -138,15 +121,13 @@ class MyApp extends State<Details>
 
               ],
             ),
-          ),
+          ),),
           Container(
             height: 100,
             child: CartButton(),
           )
         ],
       )
-
-
     );
   }
 }
