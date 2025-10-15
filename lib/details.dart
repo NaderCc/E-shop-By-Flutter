@@ -1,10 +1,12 @@
 
 import 'package:e_shop/contoller/detailscontroller.dart';
+import 'package:e_shop/view/map.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:e_shop/main.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:get/get.dart';
+import 'package:loader_button/loader_button.dart';
 
 
 import 'cartbutton.dart';
@@ -24,6 +26,7 @@ class Details extends StatefulWidget
 }
 class MyApp extends State<Details>
 {
+  bool isLoading=false;
   List<Container> cards = [
     Container(
       alignment: Alignment.center,
@@ -125,7 +128,8 @@ class MyApp extends State<Details>
           Container(
             height: 100,
             child: CartButton(),
-          )
+          ),
+
         ],
       )
     );

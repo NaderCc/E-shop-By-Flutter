@@ -1,5 +1,8 @@
 import 'package:flutter_add_to_cart_button/flutter_add_to_cart_button.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'view/map.dart';
 
 class CartButton extends StatefulWidget {
   @override
@@ -52,6 +55,7 @@ class _MyAppState extends State<CartButton> {
                       Future.delayed(Duration(seconds: 3), () {
                         setState(() {
                           stateId = AddToCartButtonStateId.done;
+                          Get.to(()=>MapSample());
                         });
                       });
                     });
